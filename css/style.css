@@ -206,6 +206,7 @@ img{
     padding-left: 10px;
     padding-right: 10px;
     width: 33%;
+	position:relative;
 }
 .header-element .cart-counter{
     position: absolute;
@@ -219,7 +220,81 @@ img{
     color: #fff !important;
     border-radius: 50px;
 }
-
+/*=========================== Header Mini CART Styles =========================*/
+.cart-dropdown-wrap {
+	 position: absolute;
+	 right: 0;
+	 top: calc(100% + 20px);
+	 z-index: 99;
+	 width: 320px;
+	 background-color: #fff;
+	 padding: 30px 20px 27px;
+	  opacity: 0;
+	 visibility: hidden; 
+	 -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+	 -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+	 transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+	 border-radius: 10px;
+}
+.my-cart:hover .cart-dropdown-wrap {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% + 10px);
+} 
+ .cart-dropdown-wrap .mini-thumb{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+ } 
+ .cart-dropdown-wrap .media-body {
+	     width: calc(100% - 95px);
+		     padding-left: 5px;
+ }
+  .cart-dropdown-wrap .media span.close{
+	  width: 35px;
+  }
+   .cart-dropdown-wrap .media span.close a{
+	   font-size: 23px;
+    color: var(--secondary-color);
+   }
+     .cart-dropdown-wrap .media span.close a:hover{
+		  color: var(--primary-color);
+	 } 
+ .cart-dropdown-wrap .media-body h5{
+	 font-size: 15px;
+ }
+  .cart-dropdown-wrap .media-body h4, .cart-dropdown-wrap .media-body span{
+	     font-size: 13px !important;
+    color: var(--primary-color) !important;
+ }
+ .cart-dropdown-wrap .media:not(:last-child){
+	 padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cccccc42;
+ }
+ .shopping-cart-footer h4{
+	     display: flex;
+    justify-content: space-between;
+	margin-bottom: 22px;
+ }
+ .shopping-cart-button{
+	     display: flex;
+    justify-content: space-between;
+ }
+  .shopping-cart-footer .mini-cart-total{
+	      font-size: 22px !important;
+    color: #000!important;
+  }
+   .shopping-cart-button a{
+	    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 13px;
+	color:#fff;
+}
+   .shopping-cart-total .mini-tootal-amount{
+	       color: #000 !important;
+    font-size: 15px !important;
+   }
 /*============================ Hero area ===============================*/
 .hero-area{
     position: relative;
@@ -1344,6 +1419,379 @@ img{
     text-decoration: none;
     width: 100%;
     text-align: center;
+}
+/*====================== Checkout Page CSS =====================*/
+
+ .checkout-area{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -30px;
+}
+ .checkout-area .billing-area input, .checkout-area  select,  .checkout-area textarea {
+    padding: 10px 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 0;
+}
+.checkout-area .billing-area{
+    width: calc(60% - 30px);
+    margin-left: 30px;
+    border: 1px solid #eee;
+}
+.checkout-area .billing-area form h2{
+    font-size: 24px;
+    
+}
+.checkout-area .billing-area form{
+    padding: 20px;
+}
+.checkout-area .billing-area form .billing-form {
+    margin-top: 16px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul{
+    width: 100%;
+    margin-top: 15px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul.input-2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul:first-child {
+    margin-top: 0px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul.input-2 li.billing-li{
+    width: calc(50% - 15px);
+    margin-left: 15px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul.input-2 li.billing-li:first-child{
+    margin-left: 0px;
+    width: calc(50% - 0px);
+    margin-left: 0px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul li.billing-li label{
+    
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul li.billing-li input{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul li.billing-li select{
+    width: 100%;
+    margin-top: 10px;
+}
+.checkout-area .billing-area form .billing-form ul.billing-ul li.billing-li option{
+    
+}
+.checkout-area .billing-area .billing-details{
+    border-top: 1px solid #eee;
+}
+.checkout-area .billing-area .billing-details form h2{
+    font-size: 24px;
+    
+}
+.checkout-area .billing-area .billing-details ul.shipping-form {
+    margin-top: 19px;
+}
+.checkout-area .billing-area .billing-details ul.shipping-form li.check-box{
+    display: flex;
+    align-items: center;
+}
+.checkout-area .billing-area .billing-details ul.shipping-form li.check-box input {
+    margin-right: 5px;
+}
+.checkout-area .billing-area .billing-details ul.shipping-form li.comment-area{
+    margin-top: 11px;
+}
+.checkout-area .billing-area .billing-details ul.shipping-form li label{
+    margin-bottom: 0px;
+}
+.checkout-area .billing-area .billing-details ul.shipping-form li textarea{
+    margin-top: 10px;
+    width: 100%;
+}
+.checkout-area .order-area{
+    width: calc(40% - 30px);
+    margin-left: 30px;
+    border: 1px solid #eee;
+}
+.checkout-area .order-area{
+    position: sticky;
+    top: 0px;
+}
+.checkout-area .order-area .check-pro h2{
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    font-size: 18px;
+    
+}
+.checkout-area .order-area .check-pro ul.check-ul li{
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-pro-img{
+    width: 25%;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-content{
+    width: 75%;
+    margin-left: 15px;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-content a{
+    display: block;
+    font-weight: 600;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-content span.check-code-blod{
+    display: block;
+    margin-top: 4px;
+    font-weight: 600;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-content span.check-code-blod span{
+    font-weight: 500;
+}
+.checkout-area .order-area .check-pro ul.check-ul li .check-content span.check-price{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.checkout-area .order-area h2{
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    font-size: 18px;
+    
+}
+.checkout-area .order-area ul.order-history{
+    padding: 0px 20px;
+}
+.checkout-area .order-area ul.order-history li.order-details{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.checkout-area .order-area ul.order-history li.order-details:first-child{
+    margin-top: 0px;
+    border: none;
+}
+.checkout-area .order-area ul.order-history li.order-details:last-child{
+    padding-top: 15px;
+    padding-bottom: 14px;
+    margin-top: 14px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.checkout-area .order-area ul.order-history li.order-details:last-child span{
+    font-weight: 600;
+}
+.checkout-area .order-area form{
+    padding: 0px 20px;
+}
+.checkout-area .order-area form ul.order-form {
+    margin-top: 20px;
+}
+.checkout-area .order-area form ul.order-form li{
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+.checkout-area .order-area form ul.order-form li:first-child{
+    margin-top: 0px;
+}
+.checkout-area .order-area form ul.order-form li input{
+    margin-right: 10px;
+}
+.checkout-area .order-area form ul.order-form label{
+    margin-bottom: 0px;
+    
+}
+.checkout-area .order-area form ul.order-form li.pay-icon a{
+    font-size: 25px;
+    margin-left: 10px;
+}
+.checkout-area .order-area form ul.order-form li.pay-icon a:first-child{
+    margin-left: 0px;
+}
+.checkout-area .order-area .checkout-btn{
+    padding: 28px 20px 20px 20px;
+}
+.checkout-area .order-area .checkout-btn a.btn-style1{
+    display: block;
+    text-align: center;
+}
+.checkout-area .checkout-btn a{
+	    font-size: 19px;
+    color: #fff;
+    padding: 14px 50px;
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+/*======================= Myaccount CSS =========================*/
+
+.my-account-area {
+  padding: 88px 0 90px;
+}
+@media only screen and (max-width: 991px) {
+  .my-account-area {
+    padding: 68px 0 70px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .my-account-area {
+    padding: 58px 0 60px;
+  }
+}
+
+.myaccount-tab-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (max-width: 767px) {
+  .myaccount-tab-menu {
+    margin-bottom: 40px;
+  }
+}
+.myaccount-tab-menu.nav-tabs .nav-link {
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-bottom: none;
+  border-radius: 0;
+  color: #000;
+  font-size: 15px;
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+  text-transform: capitalize;
+}
+.myaccount-tab-menu.nav-tabs .nav-link:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+.myaccount-tab-menu.nav-tabs .nav-link:hover, .myaccount-tab-menu.nav-tabs .nav-link.active {
+  background-color: var(--primary-color);
+  border-color: #e5e5e5;
+  color: #fff;
+}
+
+.myaccount-content {
+  border: 1px solid #eeeeee;
+  padding: 30px;
+}
+@media only screen and (max-width: 1199px) {
+  .myaccount-content {
+    padding: 20px;
+  }
+}
+.myaccount-content form {
+  margin-top: -20px;
+}
+.myaccount-content .check-btn:hover {
+  color: #0961c3;
+}
+.myaccount-content h3 {
+  font-weight: 400;
+  font-size: 20px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+.myaccount-content .welcome a:hover {
+  color: #0961c3;
+}
+.myaccount-content .welcome strong {
+  font-weight: 400;
+  color: #78bc16;
+}
+.myaccount-content p {
+  line-height: 28px;
+  margin-bottom: 2px;
+}
+.myaccount-content fieldset {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.myaccount-content fieldset legend {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.myaccount-content .account-details-form {
+  margin-top: 40px;
+}
+.myaccount-content .account-details-form .single-input-item {
+  margin-bottom: 20px;
+}
+.myaccount-content .account-details-form .single-input-item label {
+  font-size: 14px;
+  text-transform: capitalize;
+  display: block;
+  margin: 0 0 5px;
+}
+.myaccount-content .account-details-form .single-input-item input {
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  padding: 2px 20px;
+  color: #000;
+  font-size: 13px;
+}
+.myaccount-content .account-details-form .single-input-item input:focus {
+  border: 1px solid #78bc16;
+}
+.myaccount-content .account-details-form .single-input-item button {
+  border: none;
+  background-color: #78bc16;
+  font-weight: 600;
+  padding: 9px 25px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.myaccount-content .account-details-form .single-input-item button:hover {
+  background-color: #656565;
+}
+
+.myaccount-table {
+  white-space: nowrap;
+  font-size: 14px;
+}
+.myaccount-table table th,
+.myaccount-table .table th {
+  padding: 10px;
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border-color: #ccc;
+  border-bottom: 0;
+  color: #1f2226;
+}
+.myaccount-table table td,
+.myaccount-table .table td {
+  padding: 10px;
+  vertical-align: middle;
+  border-color: #ccc;
+}
+.myaccount-table table td a,
+.myaccount-table .table td a {
+  font-size: 14px;
+  color: #000;
+}
+.myaccount-table table td a i,
+.myaccount-table .table td a i {
+  position: relative;
+  top: 2px;
 }
 
 /*===================Login and registration page css ===============================*/
