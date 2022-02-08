@@ -28,7 +28,7 @@
 	/* breadcumb css */
 .breadcrumb-area{
     background-color: #fafafa;
-    padding: 15px 0px;
+    padding: 25px 0px;
 }
 .breadcrumb-area .breadcrumb-start ul.breadcrumb-url{
     display: flex;
@@ -41,7 +41,7 @@
     border-right: 1px solid #d6d6d6;
 }
 .breadcrumb-area .breadcrumb-start ul.breadcrumb-url li.breadcrumb-url-li span{
-    color: #d43b3b;
+    color: #ff814e;
     font-size: 14px;
 }
 
@@ -55,6 +55,7 @@
      overflow: hidden;
      cursor: crosshair;
      margin-bottom: 0px;
+	     background-size: cover;
 }
 .pro-page .pro-image .larg-image a.long-img figure.zoom img:hover {
      opacity: 0;
@@ -76,9 +77,12 @@
     border: 1px solid #f5ab1e;
     border-radius: 0px;
 }
-.pro-page .pro-image .pro-info h4{
-    font-size: 18px;
-    font-weight: 600;
+.pro-page .pro-image .pro-info h2{
+    font-size: 30px;
+    font-weight: 400;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
 }
 .pro-page .pro-image .pro-info .rating{
     border-top: 1px solid #ededed;
@@ -100,7 +104,7 @@
     font-weight: 600;
 }
 .pro-page .pro-image .pro-info .pro-availabale span.pro-instock{
-    color: #f5ab1e;
+    color: #ff814e;
     font-weight: 600;
 }
 .pro-page .pro-image .pro-info .pro-price{
@@ -135,7 +139,7 @@
 }
 .pro-page .pro-image .pro-info p{
     margin-top: 9px;
-    color: #999;
+    color: #121211;
 }
 .pro-page .pro-image .pro-info .pro-items{
     display: flex;
@@ -238,10 +242,8 @@
     width: 50px;
     height: 35px;
     border-top: none;
-    border-bottom: none;
-    padding: 0;
-    border-top: none;
-    border-bottom: none;
+     padding: 0;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,6 +254,9 @@
 }
 .pro-page .pro-image .pro-info .pro-btn a {
     margin-left: 5px;
+    border: none !important;
+    padding: 12px 25px;
+    border-radius: 15px;
 }
 .pro-page .pro-image .pro-info .pro-btn a:first-child {
     margin-left: 0px;
@@ -290,9 +295,11 @@
     margin-top: 22px;
 }
 .pro-page .pro-shipping .product-service{
-    background-color: #f9f9f9;
+    background-color: #F2F3F8;
     padding: 25px;
-    margin-top: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ff814e42;
 }
 .pro-page .pro-shipping .product-service:first-child{
     margin-top: 0px;
@@ -302,7 +309,7 @@
     align-items: center;
 }
 .pro-page .pro-shipping .product-service .icon-title span{
-    color: #f5ab1e;
+    color: #009934;
     font-size: 30px;
     border-radius: 50px;
     display: flex;
@@ -315,8 +322,9 @@
     text-transform: uppercase;
 }
 .pro-page .pro-shipping .product-service p{
-    color: #8e8e8e;
+    color: #000000;
     margin-top: 18px;
+    font-size: 14px;
 }
 /* tab css */
 .pro-page-content .pro-page-tab ul.nav.nav-tabs{
@@ -453,14 +461,49 @@
 .pro-page-content .pro-page-tab .tab-content .tab-pane .review-form span i {
     color: #ddd;
 }
+.pro-page-content .pro-page-tab h2{
+     border-bottom: 1px solid #dbdbdb;
+    position: relative;
+    padding-bottom: 13px;
+    margin-bottom: 35px;
+    text-align: left;
+}
+.pro-page-content .pro-page-tab h2:after{
+content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 4px;
+    width: 330px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f3a91a), to(#ff7d49));
+    background-image: -o-linear-gradient(bottom, #f3a91a, #ff7d49);
+    background-image: linear-gradient(to top, #f3a91a, #ff7d49);
+}
 /* releted product css */
 .pro-releted .section-title{
     text-align: center;
 }
 .pro-releted .section-title h2{
-    font-size: 30px;
-    margin-bottom: 30px;
+    margin-top: 80px;
+    border-bottom: 1px solid #dbdbdb;
+    position: relative;
+    padding-bottom: 13px;
+    margin-bottom: 35px;
+    text-align: left;
 }
+
+.pro-releted .section-title h2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 4px;
+    width: 275px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f3a91a), to(#ff7d49));
+    background-image: -o-linear-gradient(bottom, #f3a91a, #ff7d49);
+    background-image: linear-gradient(to top, #f3a91a, #ff7d49);
+}
+
 .tred-pro{
     position: relative;
 }
@@ -470,15 +513,7 @@
 .tred-pro .tr-pro-img a img{
     backface-visibility: hidden;
 }
-.tred-pro .Pro-lable span.p-text,
-.tred-pro .Pro-lable span.p-discount{
-    position: absolute;
-    top: 5px;
-    font-size: 13px;
-    color: #fff;
-    padding: 2px 10px 2px 15px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20% 50%);
-}
+ 
 .tred-pro .Pro-lable span.p-text{
     left: 5px;
     background-color: #f5ab1e;
@@ -603,7 +638,167 @@
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
-	</style>
+
+
+  /* the slides */
+  .pro-page-slider .slick-slide {
+      margin: 0 10px;
+  }
+
+  /* the parent */
+  .pro-page-slider .slick-list {
+      margin: 0 -10px;
+  }
+  .products-col-outer.related-products-col-outer{
+      margin: 0;
+    width: 100%;
+  }
+  
+   .products-col-outer.related-products-col-outer .products-col-inner{
+       padding-bottom: 70px;
+     }
+   
+    /* the slides */
+  .products-col-outer.related-products-col-outer .slick-slide {
+      margin: 30px 27px;
+  }
+
+  /* the parent */
+   .products-col-outer.related-products-col-outer .slick-list {
+      margin: 0 -27px;
+  }
+  .products-col-outer.related-products-col-outer .product-action-buttons{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+   .pro-page{
+       padding: 80px 0;
+   }
+   .pro-page .sale-badge{
+       padding: 3px 15px;
+    color: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    line-height: inherit;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+   }
+   
+   .product-large-gallery img{
+   width:100%;
+   }
+ .easyzoom {
+	position: relative;
+
+	/* 'Shrink-wrap' the element */
+ 
+	*display: inline;
+	*zoom: 1;
+}
+
+.easyzoom img {
+	vertical-align: bottom;
+}
+
+.easyzoom.is-loading img {
+	cursor: progress;
+}
+
+.easyzoom.is-ready img {
+	cursor: crosshair;
+}
+
+.easyzoom.is-error  img {
+	cursor: not-allowed;
+}
+
+.easyzoom-notice {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 150;
+	width: 10em;
+	margin: -1em 0 0 -5em;
+	line-height: 2em;
+	text-align: center;
+	background: #FFF;
+	box-shadow: 0 0 10px #888;
+}
+
+.easyzoom-flyout {
+	position:absolute;
+	z-index: 100;
+	overflow: hidden;
+	background: #FFF;
+}
+ 
+/**
+ * EasyZoom layout variations
+ */
+.easyzoom--overlay .easyzoom-flyout {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.easyzoom--adjacent .easyzoom-flyout {
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	margin-left: 20px;
+}
+
+
+ 
+.related-products-col-outer .arrow-left {
+    left: -5%;
+}
+ .related-products-col-outer .arrow-right {
+    right: -5%;
+}
+
+ .related-products-col-outer .slick-arrow:hover,.pro-page-slider .slick-arrow:hover {
+    background-color: #ff7f47;
+    color: #fff;
+}
+
+
+.pro-page-slider .slick-arrow,
+.related-products-col-outer .slick-arrow{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+ 	    position: absolute;
+    height: 40px;
+    width: 40px;
+    -webkit-box-shadow: 0 0 7px 0px #ddd;
+    box-shadow: 0 0 7px 0px #ddd;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 54px;
+    background: #fff;
+    cursor: pointer;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	z-index:9;
+}
+.pro-page-slider .arrow-left {
+    left: 30px;
+}
+ .pro-page-slider .arrow-right {
+    right: 0;
+}
+	</style> 
   </head>
   <body>
 <section class="topbar">
@@ -772,12 +967,12 @@
                 <div class="row">
                     <div class="col">
                         <div class="breadcrumb-start">
-                            <ul class="breadcrumb-url">
+                            <ul class="breadcrumb-url list-unstyled mb-0">
                                 <li class="breadcrumb-url-li">
-                                    <a href="index2.html">Home</a>
+                                    <a href="#">Home</a>
                                 </li>
                                 <li class="breadcrumb-url-li">
-                                    <span>Fresh litchi 100% Organi</span>
+                                    <span>Fresh green orange</span>
                                 </li>
                             </ul>
                         </div>
@@ -788,101 +983,102 @@
 
  
   <!-- product info start -->
-        <section class="section-tb-padding pro-page">
+        <section class="pro-page">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 col-lg-12 col-md-12 col-xs-12 pro-image">
                         <div class="row">
                             <div class="col-lg-6 col-xl-6 col-md-6 col-12 col-xs-12 larg-image">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="image-11">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image.jpg)">
+							
+ 				
+							
+							
+							<div class="single-gallery-slider">
+							
+                                <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
                                                 <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
                                         </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
                                     </div>
-                                    <div class="tab-pane fade" id="image-22">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/prro-page-image01.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-33">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image1-1.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-44">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image1.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-55">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image2.jpg)">
-                                                <img src="image\pro-page-image\pro-page-image2.jpg" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-66">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image2-2.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-77">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image3.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="tab-pane fade" id="image-88">
-                                        <a href="javascript:void(0)" class="long-img">
-                                            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(image/pro-page-image/pro-page-image03.jpg)">
-                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
-                                            </figure>
-                                        </a>
-                                    </div>                                               
+                                </div>   
 
-                                </div>
-                                <ul class="nav nav-tabs pro-page-slider owl-carousel owl-theme">
+								  <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
+                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
+                                        </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
+                                    </div>
+                                </div>   
+
+								 <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
+                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
+                                        </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
+                                    </div>
+                                </div>   
+
+								 <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
+                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
+                                        </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
+                                    </div>
+                                </div>   
+
+								 <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
+                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
+                                        </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
+                                    </div>
+                                </div>   
+
+								 <div class="product-large-gallery">
+                                    <div class="position-relative">
+                                            <a href="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="long-img">
+                                                <img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image">
+                                        </a>
+										<span class="sale-badge gradient-style-2">-10%</span>
+                                    </div>
+                                </div>   
+
+							</div>
+ 
+								
+								
+								
+                                <ul class="pro-page-slider pl-0">
+                             
                                     <li class="nav-item items">
-                                        <a class="nav-link active" data-bs-toggle="tab" href="#image-11"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                     <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-22"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="iamge"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                     <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-33"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                     <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-44"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                     <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-55"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                     <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-66"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
-                                    </li>
-                                    <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-77"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
-                                    </li>
-                                    <li class="nav-item items">
-                                        <a class="nav-link" data-bs-toggle="tab" href="#image-88"><img src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" class="img-fluid" alt="image"></a>
+                                      <img src="https://orfeostory.biz/minene/wp-content/uploads/2022/02/Voucher.png" class="img-fluid" alt="iamge">
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-xl-6 col-md-6 col-12 col-xs-12 pro-info">
-                                <h4>Fresh green orange</h4>
-                                <div class="rating">
+                                <h2>Fresh green orange</h2>
+                                <div class="rating d-none">
                                     <i class="fa fa-star d-star"></i>
                                     <i class="fa fa-star d-star"></i>
                                     <i class="fa fa-star d-star"></i>
@@ -896,28 +1092,11 @@
                                 <div class="pro-price">
                                     <span class="new-price">$180.00 CAD</span>
                                     <span class="old-price"><del>$200.00 CAD</del></span>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-8%</span>
-                                    </div>
+                            
                                 </div>
                                 <span class="pro-details">Hurry up! only <span class="pro-number">7</span> products left in stock!</span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and</p>
-                                <div class="pro-items">
-                                    <span class="pro-size">Size:</span>
-                                    <ul class="pro-wight list-unstyled">
-                                        <li><a href="javascript:void(0)" class="active">5KG</a></li>
-                                        <li><a href="javascript:void(0)">2KG</a></li>
-                                        <li><a href="javascript:void(0)">3KG</a></li>
-                                    </ul>
-                                </div>
-                                <div class="product-color">
-                                    <span class="color-label">Color:</span>
-                                    <span class="color">
-                                        <a href="javascript:void(0)" class="active"><span></span></a>
-                                        <a href="javascript:void(0)"><span></span></a>
-                                        <a href="javascript:void(0)"><span></span></a>
-                                    </span>
-                                </div>
+                  
                                 <div class="pro-qty">
                                     <span class="qty">Quantity:</span>
                                     <div class="plus-minus">
@@ -949,21 +1128,21 @@
                     <div class="col-xl-3 col-lg-12 col-md-12 col-xs-12 pro-shipping">
                         <div class="product-service">
                             <div class="icon-title">
-                                <span><i class="ti-truck"></i></span>
+                                <span><i class="fas fa-truck-moving"></i></span>
                                 <h4>Delivery info</h4>
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the printing </p>
                         </div>
                         <div class="product-service">
                             <div class="icon-title">
-                                <span><i class="ti-reload"></i></span>
+                                <span><i class="fas fa-sync-alt"></i></span>
                                 <h4>30 days returns</h4>
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the printing </p>
                         </div>
                         <div class="product-service">
                             <div class="icon-title">
-                                <span><i class="ti-id-badge"></i></span>
+                                <span><i class="fas fa-shield-alt"></i></span>
                                 <h4>10 year warranty</h4>
                             </div>
                             <p>Lorem Ipsum is simply dummy text of the printing </p>
@@ -979,22 +1158,13 @@
                 <div class="row">
                     <div class="col">
                         <div class="pro-page-tab">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-bs-toggle="tab" href="#tab-1">Description</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Reviews</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Video</a>
-                                </li>
-                             
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="tab-1">
-                                    <div class="tab-1content">
-                                        <h4>More details</h4>
+                        
+							  <div class="section-title">
+									<h2> Product Description</h2>
+							</div>
+							
+							<div class="product-description">
+							 <h4>More details</h4>
                                         <ul class="tab-description">
                                             <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
                                             <li>Lorem Ipsum has been the ‘s standard dummy text. Lorem Ipsumum is simply dummy text.</li>
@@ -1003,86 +1173,9 @@
                                             <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
                                             <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ‘s standard dummy text. Lorem Ipsum has been the industry’s standard dummy text ever since. Lorem Ipsum is simply dummy text.</li>
                                         </ul>
-                                    </div>
-                                    <div class="tab-2content">
-                                        <h4>Key specification</h4>
-                                        <ul class="tab-description">
-                                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry</li>
-                                            <li>Lorem Ipsum has been the ‘s standard dummy text. Lorem Ipsumum is simply dummy text.</li>
-                                            <li>type here your detail one by one li more add</li>
-                                            <li>has been the industry’s standard dummy text ever since. Lorem Ips</li>
-                                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ‘s standard dummy text. Lorem Ipsum has been the industry’s standard dummy text ever since. Lorem Ipsum is simply dummy text.</li>
-                                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ‘s standard dummy text. Lorem Ipsum has been the industry’s standard dummy text ever since. Lorem Ipsum is simply dummy text.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade show" id="tab-2">
-                                    <h4 class="reviews-title">Customer reviews</h4>
-                                    <div class="customer-reviews t-desk-2">
-                                        <span class="p-rating">
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                        </span>
-                                        <p class="review-desck">Based on 2 reviews</p>
-                                        <a href="#add-review" data-bs-toggle="collapse">Write a review</a>
-                                    </div>
-                                    <div class="review-form collapse" id="add-review">
-                                        <h4>Write a review</h4>
-                                        <form>
-                                            <label>Name</label>
-                                            <input type="text" name="name" placeholder="Enter your name">
-                                            <label>Email</label>
-                                            <input type="text" name="mail" placeholder="Enter your Email">
-                                            <label>Rating</label>
-                                            <span>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <label>Review title</label>
-                                            <input type="text" name="mail" placeholder="Review title">
-                                            <label>Add comments</label>
-                                            <textarea name="comment" placeholder="Write your comments"></textarea>
-                                        </form>
-                                    </div>
-                                    <div class="customer-reviews">
-                                        <span class="p-rating">
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span>
-                                        <h4 class="review-head">he also good and high product see like look</h4>
-                                        <span class="reviews-editor">kelin patel <span class="review-name">on</span> fab 5, 2021</span>
-                                        <p class="r-description">he also good and high product see like look</p>
-                                    </div>
-                                    <div class="customer-reviews">
-                                        <span class="p-rating">
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star e-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span>
-                                        <h4 class="review-head">he also good and fresh fruit organic product see like look</h4>
-                                        <span class="reviews-editor">Melvin louis <span class="review-name">on</span> fab 5, 2021</span>
-                                        <p class="r-description">he also good and fresh fruit organic product see like look</p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade show" id="tab-3">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe height="630" src="https://www.youtube.com/embed/0etCKCAsImI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                    </div>
-                                </div>
-                             
-                            </div>
+							</div>
+							
+			 
                         </div>
                     </div>
                 </div>
@@ -1097,386 +1190,507 @@
                         <div class="section-title">
                             <h2>Related Products</h2>
                         </div>
-                        <div class="releted-products owl-carousel owl-theme">
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-1.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-01.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh organic fruit (50gm)</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$130.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-2.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-02.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh & healty food</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$126.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-3.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-03.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-20%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh apple</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$130.00 USD</span>
-                                        <span class="old-price"><del>$150.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-4.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-04.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh litchi 100% organic</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$117.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-5.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-05.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-12%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Vegetable tomato fresh</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star b-star"></i>
-                                        <i class="fa fa-star b-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$133.00 USD</span>
-                                        <span class="old-price"><del>$145.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-6.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-06.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-21%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Natural grassbean</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$139.00 USD</span>
-                                        <span class="old-price"><del>$160.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-7.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-07.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-10%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh dryed almod (50gm)</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                        <i class="fa fa-star e-star"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$580.00 USD</span>
-                                        <span class="old-price"><del>$590.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-8.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-08.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Orange juice (5ltr)</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star b-star"></i>
-                                        <i class="fa fa-star b-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$93.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-9.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-09.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-12%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Organic coconet (5ltr) juice</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$167.00 USD</span>
-                                        <span class="old-price"><del>$179.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-10.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-010.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Shrimp jumbo (5Lb)</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star c-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$230.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-11.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-011.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-text">New</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Sp.red fresh guava</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$45.00 USD</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items">
-                                <div class="tred-pro">
-                                    <div class="tr-pro-img">
-                                        <a href="product.html">
-                                            <img class="img-fluid" src="image\pro\pro-img-12.jpg" alt="pro-img1">
-                                            <img class="img-fluid additional-image" src="image\pro\pro-img-012.jpg" alt="additional image">
-                                        </a>
-                                    </div>
-                                    <div class="Pro-lable">
-                                        <span class="p-discount">-25%</span>
-                                    </div>
-                                    <div class="pro-icn">
-                                        <a href="wishlist.html" class="w-c-q-icn"><i class="fa fa-heart"></i></a>
-                                        <a href="cart.html" class="w-c-q-icn"><i class="fa fa-shopping-bag"></i></a>
-                                        <a href="javascript:void(0)" class="w-c-q-icn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="caption">
-                                    <h3><a href="product.html">Fresh mussel (500g)</a></h3>
-                                    <div class="rating">
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star d-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="pro-price">
-                                        <span class="new-price">$245.00 USD</span>
-                                        <span class="old-price"><del>$270.00 USD</del></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div class="products-wrapper">
+              <div class="products-col-outer related-products-col-outer">
+                 <div class="products-col-inner">
+                    <span class="sale-badge gradient-style-2">-10%</span>
+                    <div class="product-thumb">
+                      <img src="images/product-images/1.png" alt="Product Title">
+                    </div>
+                    <div class="product-bottom-info">
+                      <ul class="list-unstyled category-list">
+                        <li><a href="#">Chilled / Frozen</a></li>
+                      </ul>
+                      <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+                      <div class="product-price  text-center">
+                        <span class="regular-price">  $2.00    </span>
+                        <span class="discount-price">  $5.00 </span>
+                      </div>
+                    </div>
+                    <div class="product-action-buttons  text-center">
+                      <ul class="list-unstyled mb-0">
+                        <li class="action-wishlist">
+                          <a href="#">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                             <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                               l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                               c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                               c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                               L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                               c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                               c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                               z"></path>
+                         </svg>
+                        </a>
+                      </li>
+
+
+                      <li class="action-cart">
+                        <a href="#">
+                          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                              <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                                C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                                c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                                S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                                c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                                c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                                c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                                C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="action-search">
+                        <a href="#">
+                          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                            <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                              S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                              c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                              M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+                        </svg>
+                        </a>
+                      </li>
+                      </ul>
+                    </div>
+                </div>
+
+                <div class="products-col-inner">
+                  <span class="sale-badge gradient-style-2">-10%</span>
+                  <div class="product-thumb">
+                    <img src="images/product-images/1.png" alt="Product Title">
+                  </div>
+                  <div class="product-bottom-info">
+                    <ul class="list-unstyled category-list">
+                      <li><a href="#">Chilled / Frozen</a></li>
+                    </ul>
+                    <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+                    <div class="product-price  text-center">
+                      <span class="regular-price">  $2.00    </span>
+                      <span class="discount-price">  $5.00 </span>
+                    </div>
+                  </div>
+                  <div class="product-action-buttons  text-center">
+                    <ul class="list-unstyled mb-0">
+                      <li class="action-wishlist">
+                        <a href="#">
+                          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                           <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                             l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                             c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                             c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                             L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                             c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                             c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                             z"></path>
+                       </svg>
+                      </a>
+                    </li>
+
+
+                    <li class="action-cart">
+                      <a href="#">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                            <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                              C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                              c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                              S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                              c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                              c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                              c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                              C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="action-search">
+                      <a href="#">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                          <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                            S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                            c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                            M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+                      </svg>
+                      </a>
+                    </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="products-col-inner">
+                <span class="sale-badge gradient-style-2">-10%</span>
+                <div class="product-thumb">
+                  <img src="images/product-images/1.png" alt="Product Title">
+                </div>
+                <div class="product-bottom-info">
+                  <ul class="list-unstyled category-list">
+                    <li><a href="#">Chilled / Frozen</a></li>
+                  </ul>
+                  <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+                  <div class="product-price  text-center">
+                    <span class="regular-price">  $2.00    </span>
+                    <span class="discount-price">  $5.00 </span>
+                  </div>
+                </div>
+                <div class="product-action-buttons  text-center">
+                  <ul class="list-unstyled mb-0">
+                    <li class="action-wishlist">
+                      <a href="#">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                         <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                           l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                           c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                           c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                           L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                           c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                           c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                           z"></path>
+                     </svg>
+                    </a>
+                  </li>
+
+
+                  <li class="action-cart">
+                    <a href="#">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                          <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                            C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                            c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                            S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                            c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                            c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                            c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                            C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="action-search">
+                    <a href="#">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                        <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                          S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                          c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                          M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+                    </svg>
+                    </a>
+                  </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="products-col-inner">
+              <span class="sale-badge gradient-style-2">-10%</span>
+              <div class="product-thumb">
+                <img src="images/product-images/1.png" alt="Product Title">
+              </div>
+              <div class="product-bottom-info">
+                <ul class="list-unstyled category-list">
+                  <li><a href="#">Chilled / Frozen</a></li>
+                </ul>
+                <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+                <div class="product-price  text-center">
+                  <span class="regular-price">  $2.00    </span>
+                  <span class="discount-price">  $5.00 </span>
+                </div>
+              </div>
+              <div class="product-action-buttons  text-center">
+                <ul class="list-unstyled mb-0">
+                  <li class="action-wishlist">
+                    <a href="#">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                       <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                         l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                         c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                         c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                         L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                         c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                         c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                         z"></path>
+                   </svg>
+                  </a>
+                </li>
+
+
+                <li class="action-cart">
+                  <a href="#">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                        <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                          C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                          c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                          S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                          c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                          c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                          c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                          C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                    </svg>
+                  </a>
+                </li>
+                <li class="action-search">
+                  <a href="#">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                      <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                        S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                        c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                        M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+                  </svg>
+                  </a>
+                </li>
+                </ul>
+              </div>
+          </div>
+          <div class="products-col-inner">
+            <span class="sale-badge gradient-style-2">-10%</span>
+            <div class="product-thumb">
+              <img src="images/product-images/1.png" alt="Product Title">
+            </div>
+            <div class="product-bottom-info">
+              <ul class="list-unstyled category-list">
+                <li><a href="#">Chilled / Frozen</a></li>
+              </ul>
+              <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+              <div class="product-price  text-center">
+                <span class="regular-price">  $2.00    </span>
+                <span class="discount-price">  $5.00 </span>
+              </div>
+            </div>
+            <div class="product-action-buttons  text-center">
+              <ul class="list-unstyled mb-0">
+                <li class="action-wishlist">
+                  <a href="#">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                     <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                       l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                       c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                       c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                       L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                       c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                       c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                       z"></path>
+                 </svg>
+                </a>
+              </li>
+
+
+              <li class="action-cart">
+                <a href="#">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                      <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                        C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                        c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                        S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                        c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                        c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                        c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                        C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                  </svg>
+                </a>
+              </li>
+              <li class="action-search">
+                <a href="#">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                    <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                      S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                      c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                      M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+                </svg>
+                </a>
+              </li>
+              </ul>
+            </div>
+        </div>
+        <div class="products-col-inner">
+          <span class="sale-badge gradient-style-2">-10%</span>
+          <div class="product-thumb">
+            <img src="images/product-images/1.png" alt="Product Title">
+          </div>
+          <div class="product-bottom-info">
+            <ul class="list-unstyled category-list">
+              <li><a href="#">Chilled / Frozen</a></li>
+            </ul>
+            <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+            <div class="product-price  text-center">
+              <span class="regular-price">  $2.00    </span>
+              <span class="discount-price">  $5.00 </span>
+            </div>
+          </div>
+          <div class="product-action-buttons  text-center">
+            <ul class="list-unstyled mb-0">
+              <li class="action-wishlist">
+                <a href="#">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                   <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                     l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                     c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                     c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                     L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                     c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                     c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                     z"></path>
+               </svg>
+              </a>
+            </li>
+
+
+            <li class="action-cart">
+              <a href="#">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                    <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                      C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                      c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                      S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                      c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                      c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                      c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                      C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+                </svg>
+              </a>
+            </li>
+            <li class="action-search">
+              <a href="#">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                  <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                    S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                    c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                    M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+              </svg>
+              </a>
+            </li>
+            </ul>
+          </div>
+      </div>
+      <div class="products-col-inner">
+        <span class="sale-badge gradient-style-2">-10%</span>
+        <div class="product-thumb">
+          <img src="images/product-images/1.png" alt="Product Title">
+        </div>
+        <div class="product-bottom-info">
+          <ul class="list-unstyled category-list">
+            <li><a href="#">Chilled / Frozen</a></li>
+          </ul>
+          <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+          <div class="product-price  text-center">
+            <span class="regular-price">  $2.00    </span>
+            <span class="discount-price">  $5.00 </span>
+          </div>
+        </div>
+        <div class="product-action-buttons  text-center">
+          <ul class="list-unstyled mb-0">
+            <li class="action-wishlist">
+              <a href="#">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+                 <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                   l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                   c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                   c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                   L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                   c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                   c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                   z"></path>
+             </svg>
+            </a>
+          </li>
+
+
+          <li class="action-cart">
+            <a href="#">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                  <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                    C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                    c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                    S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                    c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                    c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                    c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                    C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+              </svg>
+            </a>
+          </li>
+          <li class="action-search">
+            <a href="#">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+                <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                  S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                  c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                  M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+            </svg>
+            </a>
+          </li>
+          </ul>
+        </div>
+    </div>
+    <div class="products-col-inner">
+      <span class="sale-badge gradient-style-2">-10%</span>
+      <div class="product-thumb">
+        <img src="images/product-images/1.png" alt="Product Title">
+      </div>
+      <div class="product-bottom-info">
+        <ul class="list-unstyled category-list">
+          <li><a href="#">Chilled / Frozen</a></li>
+        </ul>
+        <h2 class="product-title"><a href="#">Bestari Cucur Flour  Mix Coconut Milk</a></h2>
+        <div class="product-price  text-center">
+          <span class="regular-price">  $2.00    </span>
+          <span class="discount-price">  $5.00 </span>
+        </div>
+      </div>
+      <div class="product-action-buttons  text-center">
+        <ul class="list-unstyled mb-0">
+          <li class="action-wishlist">
+            <a href="#">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.534 477.534" style="enable-background:new 0 0 477.534 477.534;" xml:space="preserve">
+               <path d="M438.482,58.61c-24.7-26.549-59.311-41.655-95.573-41.711c-36.291,0.042-70.938,15.14-95.676,41.694l-8.431,8.909
+                 l-8.431-8.909C181.284,5.762,98.662,2.728,45.832,51.815c-2.341,2.176-4.602,4.436-6.778,6.778
+                 c-52.072,56.166-52.072,142.968,0,199.134l187.358,197.581c6.482,6.843,17.284,7.136,24.127,0.654
+                 c0.224-0.212,0.442-0.43,0.654-0.654l187.29-197.581C490.551,201.567,490.551,114.77,438.482,58.61z M413.787,234.226h-0.017
+                 L238.802,418.768L63.818,234.226c-39.78-42.916-39.78-109.233,0-152.149c36.125-39.154,97.152-41.609,136.306-5.484
+                 c1.901,1.754,3.73,3.583,5.484,5.484l20.804,21.948c6.856,6.812,17.925,6.812,24.781,0l20.804-21.931
+                 c36.125-39.154,97.152-41.609,136.306-5.484c1.901,1.754,3.73,3.583,5.484,5.484C453.913,125.078,454.207,191.516,413.787,234.226
+                 z"></path>
+           </svg>
+          </a>
+        </li>
+
+
+        <li class="action-cart">
+          <a href="#">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+                <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968
+                  C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208
+                  c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832
+                  S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656
+                  c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564
+                  c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16
+                  c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12
+                  C412.116,454.176,409.204,462.88,403.06,469.6z"></path>
+
+            </svg>
+          </a>
+        </li>
+        <li class="action-search">
+          <a href="#">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
+              <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667
+                S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6
+                c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z
+                M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"></path>
+          </svg>
+          </a>
+        </li>
+        </ul>
+      </div>
+  </div>
+            </div>
+          </div>
                     </div>
                 </div>
             </div>
@@ -1556,11 +1770,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/slick.js"></script>
     <script src="js/script.js"></script>
+<script>
 
+   $('.products-col-outer.related-products-col-outer').slick({
+      dots: false,
+	  arrows: true,
+	  infinite: false,
+ 
+        prevArrow: '<i class="fas fa-chevron-left arrow-left"></i>',
+         nextArrow: '<i class="fas fa-chevron-right arrow-right"></i>',
+ 	  speed: 300,
+	  slidesToShow: 4,
+	  slidesToScroll: 4,
+   });
+   
+   
+   
+   
+   
+      $('.single-gallery-slider').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.pro-page-slider'
+	});
+	
+	$('.pro-page-slider').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: '.single-gallery-slider',
+	  dots: true,
+	  centerMode: true,
+	  focusOnSelect: true,
+	     prevArrow: '<i class="fas fa-chevron-left arrow-left"></i>',
+         nextArrow: '<i class="fas fa-chevron-right arrow-right"></i>',
+	});
+	
+</script>
   </body>
 </html>
