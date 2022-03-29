@@ -24,6 +24,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <title>SMART OPERATION PLATFORM</title>
+	
+	<style>
+	 .table tbody tr td.on-hold {
+    color: #ff5252;
+}
+  .table tbody tr td.pending {
+    color: #50c6e9;
+}
+  .table tbody tr td.delayed {
+    color: #ffb74f;
+}
+  .table tbody tr td.delivered {
+    color: #43d9a3;
+}
+
+
+ 
+/* tickets page css */
+.myaccount-content .profile-tickets {
+    width: calc(65% - 30px);
+    margin-left: 30px;
+}
+.myaccount-content .profile-tickets .table {
+    border-top: 1px solid #eee;
+}
+.myaccount-content .profile-tickets .table thead tr th {
+    padding-top: 11px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+ .myaccount-content .table tbody tr td {
+    padding-top: 11px;
+    padding-bottom: 10px;
+}
+/* wishlist page css */
+.wishlist-area{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.wishlist-area:last-child{
+    border-bottom: none;
+}
+.wishlist-area .wishlist-details .wishlist-item{
+    padding: 13px 0px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wishlist-area .wishlist-details .wishlist-item span.wishlist-head{
+    font-size: 16px;
+    font-weight: 700;
+}
+.wishlist-area .wishlist-details .wishlist-item span.c-items{
+    border-bottom: 1px solid #000;
+    margin-bottom: 3px;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro{
+    width: 60%;
+    margin-top: 20px;
+    display: flex;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro .wishlist-pro-image{
+    margin-right: 15px;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro .pro-details h4{
+    font-size: 16px;
+    line-height: 1;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro .pro-details span.all-size{
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 600;
+    display: block;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro .pro-details span.all-size span.pro-size{
+    font-weight: 400;   
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .wishlist-pro .pro-details span.wishlist-text{
+    margin-top: 8px;
+    line-height: 1;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .qty-item{
+    width: 20%;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .qty-item a.add-wishlist{
+    color: #f5ab1e;
+    margin-top: 7px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .qty-item a.add-wishlist:first-child {
+    margin-top: 0px;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .all-pro-price{
+    width: 20%;
+    text-align: right;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .all-pro-price span.new-price{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.wishlist-area .wishlist-details .wishlist-all-pro .all-pro-price span.old-price{
+    color: #999;
+}
+.wishlist-area .wishlist-details .other-link{
+    margin-top: 20px;
+    padding: 15px 0px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.wishlist-area .wishlist-details .other-link ul.c-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	list-style:none !important;
+}
+.wishlist-area .wishlist-details .other-link ul.c-link li.wishlist-other-link a{
+    color: #f5ab1e;
+    text-decoration: underline;
+}
+.account-details-form .single-input-item button{
+      font-weight: 500 !important;
+    color: #fff !important;
+    padding: 14px 50px !important;
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px !important;
+}
+.account-details-form .single-input-item button:hover{
+background:#ff814e;
+}
+	</style>
+	
   </head>
   <body>
 <section class="topbar">
@@ -181,18 +325,21 @@
               <div class="col-lg-3 col-md-4">
                 <nav>
                   <div class="myaccount-tab-menu nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link" id="dashboad-tab" data-bs-toggle="tab" data-bs-target="#dashboad" type="button" role="tab" aria-controls="dashboad" aria-selected="false">Dashboard</button>
+                    <button class="nav-link active" id="dashboad-tab" data-bs-toggle="tab" data-bs-target="#dashboad" type="button" role="tab" aria-controls="dashboad" aria-selected="false">Dashboard</button>
                     <button class="nav-link" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="false"> Orders</button>
                      <button class="nav-link" id="payment-method-tab" data-bs-toggle="tab" data-bs-target="#payment-method" type="button" role="tab" aria-controls="payment-method" aria-selected="false">Payment Method</button>
                     <button class="nav-link" id="address-edit-tab" data-bs-toggle="tab" data-bs-target="#address-edit" type="button" role="tab" aria-controls="address-edit" aria-selected="false">address</button>
+					
                     <button class="nav-link" id="account-info-tab" data-bs-toggle="tab" data-bs-target="#account-info" type="button" role="tab" aria-controls="account-info" aria-selected="false">Account Details</button>
+						
+                    <button class="nav-link" id="wishlist-info-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button" role="tab" aria-controls="wishlist" aria-selected="false">Wishlist</button>
                     <button class="nav-link" onclick="window.location.href='#'" type="button">Logout</button>
                   </div>
                 </nav>
               </div>
               <div class="col-lg-9 col-md-8">
                 <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade" id="dashboad" role="tabpanel" aria-labelledby="dashboad-tab">
+                  <div class="tab-pane fade active show" id="dashboad" role="tabpanel" aria-labelledby="dashboad-tab">
                     <div class="myaccount-content">
                       <h3>Dashboard</h3>
                       <div class="welcome">
@@ -208,7 +355,7 @@
                         <table class="table table-bordered">
                           <thead class="thead-light">
                             <tr>
-                              <th>Order</th>
+                              <th>Order#</th>
                               <th>Date</th>
                               <th>Status</th>
                               <th>Total</th>
@@ -217,23 +364,32 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>1</td>
+                              <td>78A643CD409</td>
                               <td>Aug 22, 2021</td>
-                              <td>Pending</td>
+                              <td class="pending">Pending</td>
                               <td>$3000</td>
                               <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
                             </tr>
+                 
                             <tr>
-                              <td>2</td>
-                              <td>July 22, 2021</td>
-                              <td>Approved</td>
-                              <td>$200</td>
+                              <td>78A643CD409</td>
+                              <td>June 12, 2021</td>
+ 							  <td class="on-hold">On Hold</td>
+                              <td>$990</td>
+                              <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                            </tr>  
+
+							<tr>
+                              <td>78A643CD409</td>
+                              <td>June 12, 2021</td>
+ 							  <td class="delayed">delayed</td>
+                              <td>$990</td>
                               <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
                             </tr>
-                            <tr>
-                              <td>3</td>
+							<tr>
+                              <td>78A643CD409</td>
                               <td>June 12, 2021</td>
-                              <td>On Hold</td>
+ 							  <td class="delivered">delivered</td>
                               <td>$990</td>
                               <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
                             </tr>
@@ -316,6 +472,101 @@
                       </div>
                     </div>
                   </div>
+				  
+				  
+				  <div class="tab-pane fade" id="wishlist" role="tabpanel" aria-labelledby="wishlist-info-tab">
+                    <div class="myaccount-content">
+                      <h3>Wishlist:</h3>
+                      <div class="profile-wishlist">
+                            <div class="wishlist-area">
+                                <div class="wishlist-details">
+                                    <div class="wishlist-item">
+                                        <span class="wishlist-head">My wishlist:</span>
+                                        <span class="wishlist-items">3 item</span>
+                                    </div>
+                                    <div class="wishlist-all-pro">
+                                        <div class="wishlist-pro">
+                                            <div class="wishlist-pro-image">
+                                                <a href="product.html"><img src="image/cart-page/cart-1/image1.jpg" class="img-fluid" alt="image"></a>
+                                            </div>
+                                            <div class="pro-details">
+                                                <h4><a href="product.html">Vegetable tomato fresh</a></h4>
+                                                <span class="all-size">Size: <span class="pro-size">5kg</span></span>
+                                                <span class="wishlist-text">Petro-demo</span>
+                                            </div>
+                                        </div>
+                                        <div class="qty-item">
+                                            <a href="cart.html" class="add-wishlist">Add to cart</a>
+                                            <a href="checkout-1.html" class="add-wishlist">Buy now</a>
+                                        </div>
+                                        <div class="all-pro-price">
+                                            <span class="new-price">$384.51 USD</span>
+                                            <span class="old-price"><del>$405.00 USD</del></span>
+                                            <span><i class="ion-android-close"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-area">
+                                <div class="wishlist-details">
+                                    <div class="wishlist-all-pro">
+                                        <div class="wishlist-pro">
+                                            <div class="wishlist-pro-image">
+                                                <a href="product.html"><img src="image/cart-page/cart-1/image3.jpg" class="img-fluid" alt="image"></a>
+                                            </div>
+                                            <div class="pro-details">
+                                                <h4><a href="product.html">Fresh healthy food</a></h4>
+                                                <span class="all-size">Size: <span class="pro-size">6kg</span></span>
+                                                <span class="wishlist-text">Multiwebinfo</span>
+                                            </div>
+                                        </div>
+                                        <div class="qty-item">
+                                            <a href="cart.html" class="add-wishlist">Add to cart</a>
+                                            <a href="checkout-1.html" class="add-wishlist">Buy now</a>
+                                        </div>
+                                        <div class="all-pro-price">
+                                            <span class="new-price">$460.00 USD</span>
+                                            <span class="old-price"><del>$400.00 USD</del></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist-area">
+                                <div class="wishlist-details">
+                                    <div class="wishlist-all-pro">
+                                        <div class="wishlist-pro">
+                                            <div class="wishlist-pro-image">
+                                                <a href="product.html"><img src="image/cart-page/cart-1/image2.jpg" class="img-fluid" alt="image"></a>
+                                            </div>
+                                            <div class="pro-details">
+                                                <h4><a href="product.html">Fresh green orange</a></h4>
+                                                <span class="all-size">Size: <span class="pro-size">3kg</span></span>
+                                                <span class="wishlist-text">Vegina-store</span>
+                                            </div>
+                                        </div>
+                                        <div class="qty-item">
+                                            <a href="cart.html" class="add-wishlist">Add to cart</a>
+                                            <a href="checkout-1.html" class="add-wishlist">Buy now</a>
+                                        </div>
+                                        <div class="all-pro-price">
+                                            <span class="new-price">$109.20 USD</span>
+                                            <span class="old-price"><del>$99.99 USD</del></span>
+                                        </div>
+                                    </div>
+                                    <div class="other-link">
+                                        <ul class="c-link">
+                                            <li class="wishlist-other-link"><a href="grid-list.html">Continue shopping</a></li>
+                                            <li class="wishlist-other-link"><a href="index1.html">Clear wishlist</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+				  
+				  
+				  
                 </div>
               </div>
             </div>

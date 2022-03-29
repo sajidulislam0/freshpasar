@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Slick slider related assets-->
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+
+
+    <!---------- Fontawesome----------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    <!-- Main Stylesheet ---------->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <title>SMART OPERATION PLATFORM</title>
+	
+	<style>
+	 /* order complete page css */
+.order-area .order-price ul.total-order{
+       display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+}
+.order-area .order-price ul.total-order li:last-child{
+    text-align: right;
+}
+.order-area .order-price ul.total-order li span.order-no{
+    display: block;
+    font-weight: 600;
+}
+.order-area .order-price ul.total-order li span.order-date{
+    color: #bbbbbb;
+    margin-top: 5px;
+}
+.order-area .order-price ul.total-order li span.total-price{
+    display: block;
+    text-align: right;
+    font-weight: 600;
+}
+.order-area .order-price ul.total-order li span.amount{
+  margin-top: 5px;
+    text-align: right;
+    font-weight: 600;
+    color: #009934;
+}
+.order-area .order-details{
+    margin-top: 24px;
+    padding-top: 28px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.order-area .order-details span.order-i {
+    font-size: 30px;
+    line-height: 1;
+}
+.order-area .order-details span.order-s {
+    display: block;
+    margin-top: 8px;
+}
+.order-area .order-details a.tracking-link{
+      margin-top: 24px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 30px;
+    background-color: #ff814e;
+    font-weight: 500;
+    border: 2px solid #ff814e;
+    border-radius: 25px;
+	display:none;
+}
+.order-area .order-details a.tracking-link:hover{
+    background-color: transparent;
+    color: #000;
+}
+.order-area .order-delivery{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+.order-area .order-delivery ul.delivery-payment{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px 0px 0px -30px;
+}
+.order-area .order-delivery ul.delivery-payment li {
+    width: calc(50% - 30px);
+    margin: 30px 0px 0px 30px;
+    border-right: 1px solid #eee; 
+	list-style-type:none;
+}
+.order-area .order-delivery ul.delivery-payment li:last-child {
+    border-right: none;
+}
+.order-area .order-delivery ul.delivery-payment li h5{
+    font-size: 16px;
+}
+.order-area .order-delivery ul.delivery-payment li p{
+    margin-top: 6px;
+}
+.order-area .order-delivery ul.delivery-payment li.delivery p{
+    font-weight: 600;
+}
+.order-area .order-delivery ul.delivery-payment li.pay p{
+    color: #bbb;
+}
+.order-area .order-delivery ul.delivery-payment li span.order-span{
+    display: block;
+    margin-top: 9px;
+    font-size: 14px;
+}
+.order-area .order-delivery ul.delivery-payment li span.order-span:first-of-type{
+    margin-top: 7px;
+}
+.order-area .order-delivery ul.delivery-payment li span.p-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	list-style: none;
+}
+.order-area .order-delivery ul.delivery-payment li span.p-label span.o-price {
+    font-weight: 600;
+}
+.order-success-image{
+    max-width: 250px;
+    margin-bottom: 15px;
+}
+	</style>
+	
+  </head>
+  <body>
+<section class="topbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="topbar-slider-main">
+          <div class="topbar-slider-inner">
+
+            <!-- Start Single Slider Item---------->
+            <div class="slider-repeat">
+              <div class="slider-repeat-inner">
+              <div class="topbar-icon">
+                <img src="images/icons/delivery.png" alt="delivery"/>
+              </div>
+              <div class="topbar-content">
+                <p>Free Delivery for orders $59 and above</p>
+              </div>
+            </div>
+          </div>
+        <!-- End Single Slider Item---------->
+
+         <!-- Start Single Slider Item---------->
+            <div class="slider-repeat">
+              <div class="slider-repeat-inner">
+
+              <div class="topbar-icon">
+                <img src="images/icons/delivery.png" alt="delivery"/>
+              </div>
+              <div class="topbar-content">
+                <p>Free Delivery for orders $59 and above another</p>
+              </div>
+            </div>
+          </div>
+        <!-- End Single Slider Item---------->
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--------- End Topdar area--------------------->
+
+<!--------- Cart Header area--------------------->
+<header class="header-area">
+  <div class="header-main-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="header-main">
+                      <!-- logo start -->
+                      <div class="header-element logo">
+                          <a href="#">
+                              <img src="images\logo.png" alt="logo-image" class="img-fluid">
+                          </a>
+                      </div>
+                      <!-- logo end -->
+                      <!-- search start -->
+                      <div class="header-element search-wrap">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>All Category</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <input type="text" class="form-control header-search" placeholder="Search your need..." >
+
+                          <button type="submit" class="btn">
+                            <svg width="30" height="30" version="1.1" id="lni_lni-search-alt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                         <path d="M62.1,57L44.6,42.8c3.2-4.2,5-9.3,5-14.7c0-6.5-2.5-12.5-7.1-17.1v0c-9.4-9.4-24.7-9.4-34.2,0C3.8,15.5,1.3,21.6,1.3,28
+                           c0,6.5,2.5,12.5,7.1,17.1c4.7,4.7,10.9,7.1,17.1,7.1c6.1,0,12.1-2.3,16.8-6.8l17.7,14.3c0.3,0.3,0.7,0.4,1.1,0.4
+                           c0.5,0,1-0.2,1.4-0.6C63,58.7,62.9,57.6,62.1,57z M10.8,42.7C6.9,38.8,4.8,33.6,4.8,28s2.1-10.7,6.1-14.6c4-4,9.3-6,14.6-6
+                           c5.3,0,10.6,2,14.6,6c3.9,3.9,6.1,9.1,6.1,14.6S43.9,38.8,40,42.7C32,50.7,18.9,50.7,10.8,42.7z"/>
+                         </svg>
+                             </button>
+                        </div>
+                      </div>
+                      <!-- search end -->
+                      <!-- header-icon start -->
+                      <div class="header-element d-flex right-block-box">
+                          <div class="box-body my-account">
+                              <a class="d-flex align-items-center" href="#">
+                                  <div class="box-icon">
+                                     <img src="images/icons/my-account.png" alt="My account"/>
+                                  </div>
+                                  <div class="px-2  py-0 py-md-0">
+                                      <h6>My Account</h6>
+                                      <span>Log in</span>
+                                   </div>
+                              </a>
+                          </div>
+
+                          <div class="box-body my-wishlist">
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="box-icon">
+                                   <img src="images/icons/wishlist.png" alt="My account"/>
+                                </div>
+                                <div class="px-2  py-0 py-md-0">
+                                    <h6>Wishlist</h6>
+                                    <span>2 items</span>
+                                 </div>
+                            </a>
+                        </div>  
+                        
+                        <div class="box-body my-cart">
+                            <a class="d-flex align-items-center" href="#">
+                                <div class="box-icon">
+                                  <span class="cart-counter">0</span>
+                                   <img src="images/icons/cart.png" alt="My account"/>
+                                </div>
+                                <div class="px-2  py-0 py-md-0">
+                                    <h6>My Cart</h6>
+                                    <span>$0.00</span>
+                                 </div>
+                            </a>
+                        </div>
+                      <!-- header-icon end -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+
+ 
+<!------ Checkout main start -------------->
+ 
+<section class="section-tb-padding">
+  <div class="container">
+    <div class="row">
+      <div class="grid-list-banner" style="background-image: url(images/slider17.jpg);">
+        <div class="grid-banner-content">
+            <h4><a href="#">Home</a> <span class="breadcrumb-sep">/</span> My account
+</h4>
+         </div>
+    </div>
+    </div>
+     
+  </div>
+</section>
+<section class="my-account-area">
+      <div class="container">
+        
+        <div class="row">
+        <div class="col-lg-12"> 
+		<section class="section-tb-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="order-area">
+                        <div class="order-price">
+                            <ul class="total-order">
+                                <li>
+                                    <span class="order-no">Order no. 1724</span>
+                                    <span class="order-date">23th jan 2021 3:04 pm</span>
+                                </li>
+                                <li>
+                                    <span class="total-price">Order total</span>
+                                    <span class="amount">$1199.00</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="order-details">
+                            <span class="text-success order-i">
+							<img class="order-success-image" src="https://orfeostorysite.com/smat_mobile/public/storage/image/1642415213843.png" alt="Thank you Image"/>
+							
+ 							
+							</span>
+                            <h4>We received your Order</h4>
+                            <span class="order-s">Your order will ship within few hours</span>
+                            <a href="#" class="tracking-link btn btn-style1">Tracking details</a>
+                        </div>
+                        <div class="order-delivery">
+                            <ul class="delivery-payment">
+                                <li class="delivery">
+                                    <h5>Delivery address</h5>
+                                    <p>Lorem ipsum</p>
+                                    <span class="order-span">7003 fairway street</span>
+                                    <span class="order-span">New york</span>
+                                    <span class="order-span">NY 10033</span>
+                                    <span class="order-span">USA</span>
+                                    <span class="order-span">Mobile No :+11-123456789</span>
+                                </li>
+                                <li class="pay">
+                                    <h5>Payment summary</h5>
+                                    <p class="transition">Transaction No : 66282856617</p>
+                                    <span class="order-span p-label">
+                                        <span class="n-price">Price</span>
+                                        <span class="o-price">$876.00</span>
+                                    </span>
+                                    <span class="order-span p-label">
+                                        <span class="n-price">Shipping charge</span>
+                                        <span class="o-price">$100.00</span>
+                                    </span>
+                                    <span class="order-span p-label">
+                                        <span class="n-price">Order Total</span>
+                                        <span class="o-price">$100.00</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+      </div>
+      </div>
+    </section>
+<!--------- Checkout main End---------->
+  
+<!-- Tabs content -->
+ 				
+				 
+<!--------- Footer area---------------->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col footer-logo-area">
+         <img src="images/logo.png" alt="Logo"/>
+      </div> 
+      <div class="col">
+        <h3 class="widgettitle">Contact Info</h3>
+        <ul class="list-unstyled mb-0 contact-list">
+          <li>11 Woodlands Close #01-08, Woodlands 11, Singapore 737853</li>
+          <li>Tel: +65 6251 2008</li>
+
+        </ul>
+      </div> 
+      <div class="col">
+        <h3 class="widgettitle">Customer Care</h3>
+        <ul class="list-unstyled menu-style mb-0">
+          <li><a href="#"> Login </a></li>
+          <li><a href="#"> My Account</a></li>
+          <li><a href="#"> Privacy policy</a></li></a></li>
+          <li><a href="#"> Terms & conditions</a></li>
+ 
+         </ul>
+      </div> 
+      
+      <div class="col">
+        <h3 class="widgettitle">Quick Links</h3>
+        <ul class="list-unstyled menu-style mb-0">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">How to sell</a></li>
+ 
+         </ul>
+      </div>
+      <div class="col apps-download-images">
+        <a href="#">
+        <img src="images/google-play.png" class="icon-google-play"/>
+      </a>
+      <a href="#">
+        <img src="images/apple-store.png" class="icon-apple-store"/>
+      </a>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<div class="copywrite-section">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-md-6">
+<div class="footer-social-area">
+  <ul class="list-unstyled mb-0">
+    <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+</div>
+      </div>
+      <div class="col-md-6">
+<span class="copywrite">
+  © 2021 - Fresh Pasar. All rights reserved.
+</span>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="js/slick.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
